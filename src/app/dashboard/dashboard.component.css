@@ -1,4 +1,12 @@
-.textStyle {
+.mat-datepicker-toggle {
+    background: url("../../assets/16.png");
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+
+.elhoo_body_title_textStyle {
     width: 256px;
     height: 41px;
     font-family: Questrial;
@@ -13,23 +21,7 @@
     color: #D22254;
 }
 
-.textStyle3 {
-    width: 165px;
-    height: 17px;
-    font-family: Questrial;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 41.6667px;
-    line-height: 17px;
-    /* identical to box height, or 40% */
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.416667px;
-    color: #323D41;
-}
-
-.textStyle2 {
+.elhoo_body_subtitle_textStyle {
     font-family: Questrial;
     font-style: normal;
     font-weight: normal;
@@ -40,37 +32,6 @@
     align-items: center;
     letter-spacing: 0.166667px;
     color: #323D41;
-}
-
-.inputDaePicker {
-    position: absolute;
-    width: 190px;
-    height: 30px;
-    left: 655px;
-    top: 76px;
-    background: #F2F5FA;
-    box-shadow: -7.1px -7.1px 13px #FFFFFF, 8.5px 9.8px 18.4px rgba(137, 148, 169, 0.27), inset 3.5px 3.5px 6px #FFFFFF;
-}
-
-.buttonDashbord {
-    height: 104px;
-    background: #e6eaf1;
-    box-shadow: -7.1px -7.1px 13px #FFFFFF, 10.5px 12.1px 23.3px rgba(137, 148, 169, 0.4), inset 3.5px 3.5px 6px #FFFFFF
-}
-
-.myChart {
-    margin-left: 1080px;
-    margin-top: -410px;
-}
-
-.myChart1 {
-    margin-left: 903px;
-    margin-top: -304px;
-    width: 573px;
-}
-
-.dateInput {
-    margin-bottom: 15px;
 }
 
 input[type="month"]::-webkit-calendar-picker-indicator {
@@ -84,21 +45,42 @@ input[type="month"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
 }
 
-.buttonDashbord2 {
-    width: 329px;
-    height: 194px;
-    background: #F2F5FA;
-    box-shadow: -7.1px -7.1px 13px #FFFFFF, 8.5px 9.8px 18.4px rgba(137, 148, 169, 0.27), inset 3.5px 3.5px 6px #FFFFFF;
+.elhoo_body_img_TableauBord {
+    width: 32px;
+}
+
+.elhoo_body_text_TableauBord {
+    margin-top: 14px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.elhoo_body_btn {
+    background: #D22254;
+    box-shadow: -13.4px -13.4px 13px #FFFFFF, 3.3px 3.8px 20.4px rgba(115, 116, 119, 0.65);
+    color: white;
+    border-color: #D22254;
+}
+
+.elhoo_body_btn:hover {
+    clear: both;
+    color: #D22254;
+    border-color: #D22254;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.23s ease-in-out 0s;
 }
 
 .DashbordSize {
     text-align: center;
-    padding-top: 15px;
-    height: 100.84px;
+    padding-top: 30px;
+    PADDING-BOTTOM: 26PX;
+    padding-top: 26px;
     background: #F2F5FA;
     box-shadow: -7.1px -7.1px 13px #FFFFFF, 8.5px 9.8px 18.4px rgba(137, 148, 169, 0.27), inset 3.5px 3.5px 6px #FFFFFF;
     border-radius: 7px;
-    margin-bottom: 23px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,25 +88,20 @@ input[type="month"]::-webkit-calendar-picker-indicator {
 
 .DashbordSize2 {
     text-align: center;
-    padding-top: 32px;
-    width: 327px;
+    padding-top: 59px;
+    padding-bottom: 57px;
     height: 263.84px;
     background: #F2F5FA;
     box-shadow: -7.1px -7.1px 13px #FFFFFF, 8.5px 9.8px 18.4px rgba(137, 148, 169, 0.27), inset 3.5px 3.5px 6px #FFFFFF;
-    margin-right: 17px;
     border-radius: 7px;
-    margin-bottom: 12px;
 }
 
 .DashbordSize3 {
     text-align: center;
-    padding-top: 32px;
-    width: 327px;
-    height: 263.84px;
-    height: 191.78px;
+    padding-top: 59px;
+    padding-bottom: 57px;
     background: #F2F5FA;
     box-shadow: -7.1px -7.1px 13px #FFFFFF, 8.5px 9.8px 18.4px rgba(137, 148, 169, 0.27), inset 3.5px 3.5px 6px #FFFFFF;
-    margin-right: 17px;
     border-radius: 7px;
 }
 
@@ -153,15 +130,23 @@ input[type="month"]::-webkit-calendar-picker-indicator {
     border-radius: 7px;
 }
 
-.prg {
-    margin-top: 14px;
-    font-size: 14px;
+.elhoo_body_text {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-right: 20px;
+    LETTER-SPACING: 2PX;
 }
 
-.img1 {
-    width: 32px;
+.elhoo_body_textt {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
-a {
-    color: black;
+.pp {
+    PADDING-LEFT: 20PX;
+    PADDING-RIGHT: 20PX;
+    FONT-SIZE: 13PX;
+    LETTER-SPACING: 1PX;
 }
