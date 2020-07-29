@@ -1,0 +1,36 @@
+.imgPosition {
+    margin-top: 10px;
+}
+
+.imgStyle {
+    margin-right: -12px;
+}
+
+.notification {
+    padding: 15px 26px;
+    position: relative;
+    display: inline-block;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.notification .badge {
+    position: absolute;
+    top: 12px;
+    right: 1px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+.iconSize {
+    border-radius: 37px;
+    width: 50px;
+    height: 50px;
+    background: #F2F5FA;
+    box-shadow: -4.9px -4.9px 9px #FFFFFF, 5.9px 6.8px 15.5px rgba(137, 148, 169, 0.4), inset 3.5px 3.5px 6px #FFFFFF;
+}
+
+.imgSize {
+    height: 15.52px;
+    margin-top: 18px;
+}

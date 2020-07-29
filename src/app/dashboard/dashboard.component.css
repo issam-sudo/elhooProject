@@ -1,0 +1,167 @@
+.textStyle {
+    width: 256px;
+    height: 41px;
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 29.1667px;
+    line-height: 41px;
+    /* identical to box height, or 141% */
+    display: flex;
+    align-items: center;
+    letter-spacing: 1.16667px;
+    color: #D22254;
+}
+
+.textStyle3 {
+    width: 165px;
+    height: 17px;
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 41.6667px;
+    line-height: 17px;
+    /* identical to box height, or 40% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.416667px;
+    color: #323D41;
+}
+
+.textStyle2 {
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16.6667px;
+    line-height: 41px;
+    /* identical to box height, or 246% */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.166667px;
+    color: #323D41;
+}
+
+.inputDaePicker {
+    position: absolute;
+    width: 190px;
+    height: 30px;
+    left: 655px;
+    top: 76px;
+    background: #F2F5FA;
+    box-shadow: -7.1px -7.1px 13px #FFFFFF, 8.5px 9.8px 18.4px rgba(137, 148, 169, 0.27), inset 3.5px 3.5px 6px #FFFFFF;
+}
+
+.buttonDashbord {
+    height: 104px;
+    background: #e6eaf1;
+    box-shadow: -7.1px -7.1px 13px #FFFFFF, 10.5px 12.1px 23.3px rgba(137, 148, 169, 0.4), inset 3.5px 3.5px 6px #FFFFFF
+}
+
+.myChart {
+    margin-left: 1080px;
+    margin-top: -410px;
+}
+
+.myChart1 {
+    margin-left: 903px;
+    margin-top: -304px;
+    width: 573px;
+}
+
+.dateInput {
+    margin-bottom: 15px;
+}
+
+input[type="month"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url("../../assets/16.png") no-repeat;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+    cursor: pointer;
+}
+
+.buttonDashbord2 {
+    width: 329px;
+    height: 194px;
+    background: #F2F5FA;
+    box-shadow: -7.1px -7.1px 13px #FFFFFF, 8.5px 9.8px 18.4px rgba(137, 148, 169, 0.27), inset 3.5px 3.5px 6px #FFFFFF;
+}
+
+.DashbordSize {
+    text-align: center;
+    padding-top: 15px;
+    height: 100.84px;
+    background: #F2F5FA;
+    box-shadow: -7.1px -7.1px 13px #FFFFFF, 8.5px 9.8px 18.4px rgba(137, 148, 169, 0.27), inset 3.5px 3.5px 6px #FFFFFF;
+    border-radius: 7px;
+    margin-bottom: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.DashbordSize2 {
+    text-align: center;
+    padding-top: 32px;
+    width: 327px;
+    height: 263.84px;
+    background: #F2F5FA;
+    box-shadow: -7.1px -7.1px 13px #FFFFFF, 8.5px 9.8px 18.4px rgba(137, 148, 169, 0.27), inset 3.5px 3.5px 6px #FFFFFF;
+    margin-right: 17px;
+    border-radius: 7px;
+    margin-bottom: 12px;
+}
+
+.DashbordSize3 {
+    text-align: center;
+    padding-top: 32px;
+    width: 327px;
+    height: 263.84px;
+    height: 191.78px;
+    background: #F2F5FA;
+    box-shadow: -7.1px -7.1px 13px #FFFFFF, 8.5px 9.8px 18.4px rgba(137, 148, 169, 0.27), inset 3.5px 3.5px 6px #FFFFFF;
+    margin-right: 17px;
+    border-radius: 7px;
+}
+
+.dateInputFormat {
+    background: #F2F5FA;
+    box-shadow: -7.1px -7.1px 13px #FFFFFF, 8.5px 9.8px 18.4px rgba(137, 148, 169, 0.27), inset 3.5px 3.5px 6px #FFFFFF;
+}
+
+.tlp {
+    padding-left: 140px;
+    padding-right: 50px;
+}
+
+.tlp1 {
+    padding-left: 140px;
+}
+
+.tlp3 {
+    margin-left: -146px;
+}
+
+.yer {
+    border: none;
+    margin-bottom: 36px;
+    padding: 12px 6px 12px 20px;
+    border-radius: 7px;
+}
+
+.prg {
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+.img1 {
+    width: 32px;
+}
+
+a {
+    color: black;
+}
