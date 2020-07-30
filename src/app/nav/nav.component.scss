@@ -6,20 +6,24 @@
     margin-right: -12px;
 }
 
+.elhoo_nav_logoPosition_secondletterImg {
+    margin-top: 10px;
+    margin-left: -5px;
+}
+
 .elhoo_nav_notification {
     padding: 15px 26px;
     position: relative;
     display: inline-block;
     border-radius: 3px;
     cursor: pointer;
-}
-
-.elhoo_nav_notification .badge {
-    position: absolute;
-    top: 12px;
-    right: 1px;
-    padding: 2px 5px;
-    border-radius: 50%;
+    .badge {
+        position: absolute;
+        top: 12px;
+        right: 1px;
+        padding: 2px 5px;
+        border-radius: 50%;
+    }
 }
 
 .elhoo_nav_icon {
@@ -33,4 +37,5 @@
 .elhoo_nav_iconImgSize {
     height: 15.52px;
     margin-top: 18px;
+    margin-right: -4px;
 }

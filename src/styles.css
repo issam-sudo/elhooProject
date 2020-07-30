@@ -5,9 +5,11 @@
 html,
 body {
     height: 100%;
-}
-
-body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    LETTER-SPACING: 1PX;
 }

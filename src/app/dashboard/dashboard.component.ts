@@ -8,27 +8,22 @@ import * as _moment from 'moment';
 import { Moment} from 'moment';
 
 const moment =   _moment;
-
-// See the Moment.js docs for the meaning of these formats:
-// https://momentjs.com/docs/#/displaying/format/
 export const MY_FORMATS = {
   parse: {
-    dateInput: 'MM/YYYY',
+    dateInput: 'YYYY',
   },
   display: {
-    dateInput: 'MM/YYYY',
-    monthYearLabel: 'MMM YYYY',
+    dateInput: 'YYYY',
+ 
     dateA11yLabel: 'LL',
-    monthYearA11yLabel: 'MMMM YYYY',
+ 
   },
 };
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css'], providers: [
-    // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
-    // application's root module. We provide it at the component level here, due to limitations of
-    // our example generation script.
+  styleUrls: ['./dashboard.component.scss'], providers: [
+   
     {
       provide: DateAdapter,
       useClass: MomentDateAdapter,
@@ -42,73 +37,114 @@ export class DashboardComponent implements OnInit {
 
   typeDgr: any  ;
   e: any  ;
-  date = new FormControl(moment());
+  date_chart = new FormControl(moment());
+  date_statistique = new FormControl(moment());
 
-  chosenYearHandler(normalizedYear: Moment) {
-    const ctrlValue = this.date.value;
-    ctrlValue.year(normalizedYear.year());
-    this.date.setValue(ctrlValue);
-  }
 
-  chosenMonthHandler(normalizedMonth: Moment, datepicker: MatDatepicker<Moment>) {
-    const ctrlValue = this.date.value;
-    ctrlValue.month(normalizedMonth.month());
-    this.date.setValue(ctrlValue);
-    datepicker.close();
-  }
 
   constructor() { }
 
 
 
   ngOnInit(): void {
-
+    
     this.getChart();
   }
 
 
   async getChart(){
-
+ 
     // tslint:disable-next-line:prefer-const
     let ctx = document.getElementById('myChart');
     // tslint:disable-next-line:prefer-const
     let myChart = new Chart(ctx, {
       type: 'line',
       data: {
-          labels: ['Jan', 'Fev', 'Mar' , 'Apr', 'May', 'Jun', 'Jul' , 'Out' ],
+          labels: ['Jan', 'Fev', 'Mar' , 'Apr', 'May', 'Jun', 'Jul' , 'Out' ,'Sep' ,'Oct' ,'Nov' ,'Dec'],
           datasets: [{
               label: 'Achat',
-              data: [10, 150, 600 , 900, 50 , 60 , 588 , 647],
+              data: [100, 150, 560 , 500, 50 , 60 , 588 , 142 ,140 ,474 ,479 ,320],
               backgroundColor: [
-                  'rgba(255, 99, 132, 0)',
+                'rgb(245, 89, 82 ,0)',
+               
 
               ],
               borderColor: [
-                  'rgba(255, 99, 132, 1)',
+                'rgb(245, 89, 82 ,1)',
+                
 
               ],
-              borderWidth: 2
+              borderWidth: 1,
+              pointStyle:'circle',
+              pointRadius:'5',
+              pointBackgroundColor:'white',
+              pointBorderColor:'rgb(245, 89, 82 ,1)'
           },
           {
             label: 'Vente',
-            data: [10, 150, 600 , 150, 500 , 600 , 88 , 647],
+            data: [0, 150, 500 , 150, 500 , 485 , 88 , 574 ,147 ,125 ,256 ,369],
             backgroundColor: [
-                'rgb(30,144,255,0)',
+                'rgb(210, 34, 84,0)',
+               
 
             ],
             borderColor: [
-                'rgb(30,144,255)',
+                'rgb(210, 34, 84 ,1)',
 
             ],
-            borderWidth: 2
+            borderWidth: 1,
+            pointStyle:'circle',
+            pointRadius:'5',
+            pointBackgroundColor:'white',
+            pointBorderColor:'rgb(210, 34, 84 ,1)'
         }
         ]
       },
       options: {
+        layout: {
+          padding: {
+              left: 10,
+              right: 0,
+              top: 0,
+              bottom: 0
+          }
+      },
+        legend: {
+          display: true,
+          position: 'left',
+          align: 'start',
+         
+          labels: {
+            pointBackgroundColor:'red',
+            usePointStyle: true,
+            
+               
+          }
+      },
           scales: {
+           
+            xAxes: [{
+              ticks: {
+                padding: 30
+              },
+              gridLines: {
+                display: false,
+                drawOnChartArea: false,
+                drawTicks: false,
+               
+              }
+            }],
               yAxes: [{
                   ticks: {
-                      beginAtZero: true
+                      beginAtZero: true,
+                      display: false,
+                   
+                     
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                    drawTicks: false
                   }
               }]
           }
@@ -120,6 +156,23 @@ export class DashboardComponent implements OnInit {
    }
 
 
+   chosenYearHandler_chart(normalizedYear_chart: Moment ,datepicker_chart: MatDatepicker<Moment>) {
+    const ctrlValue = this.date_chart.value;
+    ctrlValue.year(normalizedYear_chart.year());
+    this.date_chart.setValue(ctrlValue);
+    datepicker_chart.close();
+  }
+
+  
+  
+  chosenYearHandler_statistique(normalizedYear_statistique: Moment ,datepicker_statistique: MatDatepicker<Moment>) {
+    const ctrlValue1 = this.date_statistique.value;
+    ctrlValue1.year(normalizedYear_statistique.year());
+    this.date_statistique.setValue(ctrlValue1);
+    console.log(this.date_statistique.setValue(ctrlValue1))
+    datepicker_statistique.close();
+  }
+ 
 
 
 }
