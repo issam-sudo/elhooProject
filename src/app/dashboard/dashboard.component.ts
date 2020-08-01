@@ -39,16 +39,37 @@ export class DashboardComponent implements OnInit {
   e: any  ;
   date_chart = new FormControl(moment());
   date_statistique = new FormControl(moment());
+  Ventes: any = 0;
+  Achats: any = 0;
+  Marge1: any = 0;
+  Marge2: any = 0;
+
+  year: any = '2020';
+
+  VentesElement: any = (0).toFixed(2);
+  AchatsElement: any = (0).toFixed(2);
+  Marge1Element: any = (0).toFixed(2);
+  Marge2Element: any = (0).toFixed(2);
 
 
 
-  constructor() { }
+  constructor() {
+
+  }
+
+
+
 
 
 
   ngOnInit(): void {
+    var num = 4552;  // typeof num is "Number"
+
+
+console.log(num.toFixed(2))
 
     this.getChart();
+    this.TableauBordFilter();
   }
 
 
@@ -170,13 +191,121 @@ export class DashboardComponent implements OnInit {
 
 
 
-  chosenYearHandler_statistique(normalizedYear_statistique: Moment , datepicker_statistique: MatDatepicker<Moment>) {
+  async chosenYearHandler_statistique(normalizedYear_statistique: Moment , datepicker_statistique: MatDatepicker<Moment>) {
+
+
+
+    this.VentesElement = (0).toFixed(2);
+    this.AchatsElement = (0).toFixed(2);
+    this.Marge1Element = (0).toFixed(2);
+    this.Marge2Element = (0).toFixed(2);
+
     const ctrlValue1 = this.date_statistique.value;
     ctrlValue1.year(normalizedYear_statistique.year());
     this.date_statistique.setValue(ctrlValue1);
     console.log(this.date_statistique.setValue(ctrlValue1));
+    this.year = ctrlValue1._d.toString().split(' ')[3];
+    console.log(this.year);
     datepicker_statistique.close();
+
+    const url = 'https://api.github.com/search/repositories?q=created:%3E2019-06-21&sort=stars&order=desc&page=';
+
+    // tslint:disable-next-line:no-shadowed-variable
+    const response = await fetch(url);
+
+    if (response.ok) {
+      const json = await response.json();
+      console.log(json);
+
+      // tslint:disable-next-line:only-arrow-functions
+      this.TableauBordFilter = await json.items.filter(function(TableauBordFilterelement) {
+
+        if (TableauBordFilterelement.created_at.split('-')[0] === this.year) {
+
+         return TableauBordFilterelement.created_at.split('-')[0].includes(this.year);
+        }
+
+      }.bind(this));
+
+      // tslint:disable-next-line:prefer-for-of
+      for (let index = 0; index < this.TableauBordFilter.length; index++) {
+       const element = this.TableauBordFilter[index];
+
+       this.Ventes += element.forks;
+       this.Achats += element.watchers;
+       this.Marge1 += element.open_issues;
+       this.Marge2 += element.open_issues_count;
+
+       this.VentesElement = this.Ventes.toFixed(2);
+       this.AchatsElement = this.Achats.toFixed(2);
+       this.Marge1Element = this.Marge1.toFixed(2);
+       this.Marge2Element = this.Marge2.toFixed(2);
+
+     }
+
+      } else {
+        // tslint:disable-next-line:quotemark
+        alert("HTTP-Error: " + response.status);
+
+
+    }
+
+
+
   }
+
+
+  async  TableauBordFilter(){
+    const url = 'https://api.github.com/search/repositories?q=created:%3E2019-06-21&sort=stars&order=desc&page=';
+
+    // tslint:disable-next-line:no-shadowed-variable
+    const response = await fetch(url);
+
+    if (response.ok) {
+      const json = await response.json();
+      console.log(json);
+
+      // tslint:disable-next-line:only-arrow-functions
+      this.TableauBordFilter = await json.items.filter(function(TableauBordFilterelement) {
+
+        if (TableauBordFilterelement.created_at.split('-')[0] === this.year) {
+
+         return TableauBordFilterelement.created_at.split('-')[0].includes(this.year);
+        }
+
+      }.bind(this));
+
+
+
+
+
+      // tslint:disable-next-line:prefer-for-of
+      for (let index = 0; index < this.TableauBordFilter.length; index++) {
+       const element = this.TableauBordFilter[index];
+
+       this.Ventes += element.forks;
+       this.Achats += element.watchers;
+       this.Marge1 += element.open_issues;
+       this.Marge2 += element.open_issues_count;
+
+       this.VentesElement = this.Ventes.toFixed(2);
+       this.AchatsElement = this.Achats.toFixed(2);
+       this.Marge1Element = this.Marge1.toFixed(2);
+       this.Marge2Element = this.Marge2.toFixed(2);
+
+
+     }
+
+      console.log(this.Ventes);
+      } else {
+        // tslint:disable-next-line:quotemark
+        alert("HTTP-Error: " + response.status);
+
+
+    }
+
+  }
+
 
 
 
