@@ -13,14 +13,16 @@
                 </div>
             </div>
             <div class="row pt-5 pl-2">
-                <div class="col-6 col-md-2 mb-3 pl-2 px-sm-2">
-                    <div class="elhoo_body_text_TableauBord_divContent pl-0" #elhoolink [ngStyle]="{'height.px': elhoolink.offsetWidth}">
-                        <a class="elhoo_body_text_TableauBord" href="#">
+                <div class="col-6 col-md-2 mb-3 pl-2 px-sm-2  ">
+
+                    <div class="elhoo_body_text_TableauBord_divContent  pl-0" #elhoolink [ngStyle]="{'height.px': elhoolink.offsetWidth}" >
+                        <a class="elhoo_body_text_TableauBord   " href="#">
                             <img class="img-fluid mb-2" src="../../assets/Combined shape 3715.svg" />
                             <p>Vente</p>
                         </a>
-                    </div>
+
                 </div>
+                  </div>
                 <div class="col-6 col-md-2 mb-3 pl-2 px-sm-2">
                     <div class="elhoo_body_text_TableauBord_divContent" [ngStyle]="{'height.px': elhoolink.offsetWidth}">
                         <a class="elhoo_body_text_TableauBord" href="#">
@@ -119,7 +121,7 @@
             <div class="row elhoo_body_dateInputFormat_Position">
                 <div class="col-12 col-md-12 text-right pr-3">
                     <mat-form-field class="elhoo_body_dateInputFormat">
-                        <input min="1990" max="{{year}}" class="ml-3" matInput [matDatepicker]="dp" [formControl]="date_chart" />
+                        <input min="1990"  max="2020" class="ml-3" matInput [matDatepicker]="dp" [formControl]="date_chart" />
                         <mat-datepicker-toggle matSuffix [for]="dp">
                             <mat-icon matDatepickerToggleIcon><img class="elhoo_body_input_date" src="../../assets/16.png" /></mat-icon>
                         </mat-datepicker-toggle>
@@ -144,7 +146,7 @@
             <div class="row">
                 <div class="col-12 col-md-12 text-right pl-2 ">
                   <mat-form-field class="elhoo_body_dateInputFormat">
-                      <input min="1990" max="{{year}}" class="ml-3" matInput [matDatepicker]="dp1" [formControl]="date_statistique" />
+                      <input min="1990" max="2020" class="ml-3" matInput [matDatepicker]="dp1" [formControl]="date_statistique" />
                       <mat-datepicker-toggle matSuffix [for]="dp1">
                           <mat-icon matDatepickerToggleIcon><img class="elhoo_body_input_date" src="../../assets/16.png" /></mat-icon>
                       </mat-datepicker-toggle>
@@ -161,8 +163,6 @@
                 <p class="elhoo_body_text_TableauBord">Ventes</p>
                 <h1 class=" text-center mb-0">{{VentesElement }} €</h1>
                 </div>
-
-
         </div>
         <div class="col-6 col-md-3    px-sm-3 ">
             <div class="elhoo_body_TableauBord-result_filter">
