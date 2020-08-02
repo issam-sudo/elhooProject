@@ -16,8 +16,13 @@
     background-color: #d22254;
 }
 
-::ng-deep ::ng-deep .mat-datepicker-content {
+::ng-deep .mat-datepicker-content {
     margin-top: 6px;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding: 0em 0;
+    padding-top: 4px;
 }
 
 .elhoo_body_title_textStyle {
